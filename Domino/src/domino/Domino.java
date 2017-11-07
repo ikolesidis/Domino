@@ -16,13 +16,20 @@ public class Domino {
      */
     public static void main(String[] args) {
         DominoBoard board = new DominoBoard();
-        board.addDomino(0, 0, true, true);
+        DominoTile a = new DominoTile(0, 0);
+        board.addDomino(a,true);
         board.printBoard();
-        board.addDomino(5, 0, true,false);
+        DominoTile b = new DominoTile(0, 5);
+        board.addDomino(b,false);
         board.printBoard();
-        board.addDomino(6,5,true,false);
+        DominoTile c = new DominoTile(6, 5);
+        board.addDomino(c,false);
         board.printBoard();
-        board.addDomino(0, 3, false, true);
+        DominoTile d = new DominoTile(0, 3);
+        board.addDomino(d, true);
+        board.printBoard();
+        DominoTile e = new DominoTile(3, 6);
+        board.addDomino(e, true);
         board.printBoard();
     }
     

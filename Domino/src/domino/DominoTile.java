@@ -9,17 +9,13 @@ package domino;
  *
  * @author Ilias Kolesidis
  */
-public class DominoValue {
+public class DominoTile {
     private int topValue;
     private int bottomValue;
-    private boolean front=false;
-    private boolean back=false;
 
-    public DominoValue(int aTopValue, int aBottomValue, boolean aFront,boolean aBack) {
+    public DominoTile(int aTopValue, int aBottomValue) {
         topValue = aTopValue;
         bottomValue = aBottomValue;
-        front= aFront;
-        back= aBack;
     }
     public int  getTopValue(){
         return topValue;
@@ -27,10 +23,9 @@ public class DominoValue {
     public int getBottomValue(){
         return bottomValue;
     }
-    public boolean isFront(){
-        return front;
-    }
-    public boolean isBack(){
-        return back;
+    public void changeOrientation(){
+        int temp=topValue;
+        topValue=bottomValue;
+        bottomValue=temp;
     }
 }
