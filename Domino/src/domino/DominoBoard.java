@@ -57,10 +57,10 @@ public class DominoBoard {
 //        return itWillNeverReachHere;
 //    }
     public void printBoard(){
-        int i=1;
+        //int i=1;
         for (DominoTile aDomino :board){
-            System.out.printf("\n %d: top =%d, bottom =%d",i,aDomino.getTopValue(),aDomino.getBottomValue());
-            i++;
+            System.out.printf(" %d-%d |",aDomino.getTopValue(),aDomino.getBottomValue());
+            //i++;
         }
     }
 }
